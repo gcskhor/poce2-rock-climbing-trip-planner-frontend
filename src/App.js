@@ -1,12 +1,11 @@
+import { useState } from "react";
 import "./App.css";
-import Trips from "./components/Trips";
+import Trips from "./components/Trips.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Rock Climbing Trip Planner!</p>
-      </header>
+      <p>Rock Climbing Trip Planner!</p>
       <Trips />
     </div>
   );
