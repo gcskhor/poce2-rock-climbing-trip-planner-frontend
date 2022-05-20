@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { BACKEND_URL } from '../../store.js';
+import styles from './Climbs.module.css';
 
 export default function ClimbForm({ tripId, setClimbs }) {
 	const blankClimb = { name: '', difficulty: 0 };
@@ -27,7 +28,8 @@ export default function ClimbForm({ tripId, setClimbs }) {
 	};
 
 	return (
-		<div>
+		<div className={styles.climbform}>
+			<p>Submit a new climb:</p>
 			<label htmlFor="name">Name of climb: </label>
 			<input
 				type="text"

@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BACKEND_URL } from '../../store.js';
 import ClimbForm from './ClimbForm.js';
+import styles from './Climbs.module.css';
 
 export default function Climbs({ tripId }) {
 	const [climbs, setClimbs] = useState([]);
@@ -20,7 +21,7 @@ export default function Climbs({ tripId }) {
 	function ClimbsList() {
 		const list = climbs.map((climb) => {
 			return (
-				<li>
+				<li key={`${tripId}climb${climb.id}`}>
 					{climb.name} (Difficulty: {climb.difficulty})
 				</li>
 			);
@@ -31,7 +32,7 @@ export default function Climbs({ tripId }) {
 	console.log(climbs);
 
 	return (
-		<div>
+		<div className={styles.climbsList}>
 			{climbs.length > 0 && <ClimbsList />}
 			<ClimbForm tripId={tripId} setClimbs={setClimbs} />
 		</div>
