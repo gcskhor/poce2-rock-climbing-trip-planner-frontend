@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import TripForm from "./trips-components/TripForm.js";
-import TripList from "./trips-components/TripList.js";
+import TripForm from "./TripForm.js";
+import TripList from "./TripList.js";
 import { BACKEND_URL } from "../store.js";
 
 export default function Trips() {

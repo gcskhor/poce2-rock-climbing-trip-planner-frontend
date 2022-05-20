@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { BACKEND_URL } from "../../store";
+import { BACKEND_URL } from "../store";
 
 export default function TripForm({ setTrips }) {
   const [tripName, setTripName] = useState("");
