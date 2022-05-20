@@ -23,7 +23,7 @@ export default function Trips() {
   return (
     <div>
       <TripForm setTrips={setTrips} />
-      <TripList trips={trips} />
+      {trips.length > 0 && <TripList trips={trips} />}
     </div>
   );
 }
